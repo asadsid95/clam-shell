@@ -43,3 +43,5 @@ echo $0
 # if/elif/else
 # sample login script
 
+# case statement
+
