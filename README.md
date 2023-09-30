@@ -1,0 +1,2 @@
+- bash lacks object oriented features
+- bash has difficult syntax compared to python
