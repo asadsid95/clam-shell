@@ -1,12 +1,5 @@
-#!/bin/bash
+echo "Number of files in a directory: "
 
-echo "Enter country you've visited: "
-read Visited
+files=$(ls | wc -l)
 
-if [ $Visited = "Canada" ]; then
-    echo "Its Canada"
-else 
-
-    echo "Its not Canada"
-
-fi
+echo $files
