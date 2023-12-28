@@ -1,5 +1,6 @@
-echo "Number of files in a directory: "
-
-files=$(ls | wc -l)
-
-echo $files
+echo "File name: $0"
+echo "1st parameter: $1"
+echo "2nd parameter: $2"
+echo "Each arg kept as individual entity: $@"
+echo "All args as one entity: $*"
+echo "Total arg supplied: $#"
