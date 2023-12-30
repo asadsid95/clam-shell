@@ -1,12 +1,6 @@
-echo "File name: $0" 
-echo "1st parameter: $1"
-echo "2nd parameter: $2"
-echo "Each arg kept as individual entity: $@"
-echo "All args as one entity: $*"
-echo "Total arg supplied: $#"
+source_file="/Users/asad/Desktop/clam_shell"
+destination_file="/Users/asad/Desktop"
 
-# log into result.txt every minute
-echo 'hello' >> result.txt
+file_content=$(cat main.sh)
 
-# crontab -e -- to check for existing crontab
-# * * * * * sh /Users/asad/Desktop/clam-shell/main.sh
+touch $file_content >> "hello.txt"
