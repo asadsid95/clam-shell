@@ -1,6 +1,6 @@
-source_file="/Users/asad/Desktop/clam_shell"
-destination_file="/Users/asad/Desktop"
+source_file="hello.txt"
+# destination_file="/Users/asad/Desktop"
 
-file_content=$(cat main.sh)
+file_content=$(cat "main.sh")
 
-touch $file_content >> "hello.txt"
+echo "$file_content" > "$source_file"
