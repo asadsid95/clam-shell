@@ -4,3 +4,9 @@ source_file="hello.txt"
 file_content=$(cat "main.sh")
 
 echo "$file_content" > "$source_file"
+source_file="hello.txt"
+# destination_file="/Users/asad/Desktop"
+
+file_content=$(cat "main.sh")
+
+echo "$file_content" >> "$source_file"

@@ -1,6 +1,9 @@
-source_file="hello.txt"
-# destination_file="/Users/asad/Desktop"
+# list all files and dir that match provided extension
 
-file_content=$(cat "main.sh")
+if [ $# -ne 2 ]; then
+    echo "2 args needed"
+fi
 
-echo "$file_content" > "$source_file"
+if [ $1 = ".md" ]; then
+    ls
+fi
