@@ -1,9 +1,11 @@
-# list all files and dir that match provided extension
+#!/bin/bash
 
-if [ $# -ne 2 ]; then
-    echo "2 args needed"
-fi
+# print 'Happy New Years' according to correct date
 
-if [ $1 = ".md" ]; then
-    ls
+current_date=$(date +"%m-%d")
+
+if [ "$current_date" == "01-01" ]; then
+    echo "Happy New Years!"
+else
+    echo "Today is a regular day: $(date +"%m-%d-%y")"
 fi
