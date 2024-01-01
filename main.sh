@@ -1,11 +1,12 @@
 #!/bin/bash
 
-# print 'Happy New Years' according to correct date
+current_dir=$1
+target_dir=$2
 
-current_date=$(date +"%m-%d")
-
-if [ "$current_date" == "01-01" ]; then
-    echo "Happy New Years!"
-else
-    echo "Today is a regular day: $(date +"%m-%d-%y")"
+if [ $# -ne 2 ]; then
+    echo "need 2 arguments"
+    exit 1
 fi
+
+
+tar -cvzf "backup_archive_file" "/Users/asad/Desktop/clam-shell"
