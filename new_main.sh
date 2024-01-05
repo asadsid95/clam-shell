@@ -17,6 +17,7 @@ for file  in *; do
         echo "Renamed: $file to $new_filename"
 
     fi
+    
 done
 
 echo "Batch renaming completed"
