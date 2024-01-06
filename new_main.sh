@@ -1,8 +1,9 @@
 #!/bin/bash
 
-ip_address=("000.000.000.000" "000.000.000.001" "000.000.000.002")
+ip_address=("000.000.000.000" "000.000.000.001" "000.000.000.002" "000.000.000.003" "000.000.000.004")
 
-for ip in "${ip_address[@]}"; do
-    echo $ip
+echo "${#ip_address[@]}"
 
-done
+# for ip in "${#ip_address[@]}"; do
+#     echo $ip
+# done
