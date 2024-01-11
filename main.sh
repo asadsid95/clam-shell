@@ -1,24 +1,16 @@
 #!/bin/bash
 
-urls=("google.comm" "news.ycombinator.com")
+if [ $# -eq 0 ]; then
+    echo "Provide >=1 arg"
+    # exit 1
+fi
 
-check_server() {
+function check_ip_dns() {
 
-    local server=$1
-    local result=$(ping -c 1 "$server" 2>&1)
-    
-    if [[ $? -eq 0 ]]; then
-        echo "$server is reachable===========; /n Response: $result"
-    else
-        echo "$server is unreachable;^^^^^^^^^^^ Error: $result"
-    fi
-
-    echo $result "/n"
-
+    local own_ip=$(ifconfig)
+    local response=$(nslookup "$1")
+    echo $own_ip
+    return 
 }
 
-
-for url in "${urls[@]}"; do
-    # check_server 
-    check_server "$url"
-done
+check_ip_dns $1
