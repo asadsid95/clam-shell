@@ -1,16 +1,11 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]; then
-    echo "Provide >=1 arg"
-    # exit 1
-fi
+file_to_read="main.csv"
 
-function check_ip_dns() {
+result=$(awk -F ','  '{print $0}'  $file_to_read)
 
-    local own_ip=$(ifconfig)
-    local response=$(nslookup "$1")
-    echo $own_ip
-    return 
-}
+# echo -e "$result"
 
-check_ip_dns $1
+awk 'NF>=2' $file_to_read
+
+# tail -n +5 $file_to_read
