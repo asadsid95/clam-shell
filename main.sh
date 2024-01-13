@@ -1,15 +1,7 @@
 #!/bin/bash
 
-file_to_read="main.csv"
+# ping -c 2 google.com
 
-result=`awk -F ','  '{print $0}'  $file_to_read`
+netstat -s
 
-# echo -e "$result"
-
-awk  'NF>=0'  $file_to_read
-
-
-# tail -n +5 $file_to_read
-
-files=`ls -l | wc -l`
-echo "Files in $(pwd) directory: $files"
+route -n
