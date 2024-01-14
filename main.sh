@@ -1,7 +1,18 @@
 #!/bin/bash
 
-# ping -c 2 google.com
+# Execute another script
+#-----------
 
-netstat -s
 
-route -n
+# Go to dir
+cd utils/
+
+# Show time
+echo "Uptime: $(uptime)"
+
+
+# Execute the script
+./check_cpu.sh
+
+# Show time
+echo $(date)
