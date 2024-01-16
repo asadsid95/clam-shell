@@ -14,5 +14,5 @@ echo "Uptime: $(uptime)"
 # Execute the script
 ./check_cpu.sh
 
-# Show time
+# Show time                 
 echo $(date)
