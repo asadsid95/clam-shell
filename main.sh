@@ -10,9 +10,7 @@ cd utils/
 # Show time
 echo "Uptime: $(uptime)"
 
-
-# Execute the script
-./check_cpu.sh
+grep -n 'file' text.txt
 
 # Show time                 
 echo $(date)

@@ -1,4 +1,4 @@
 #!/bin/bash
 echo $(pwd)
-
-ls | xargs echo "/hello"
+ls
+# ls | xargs rm
