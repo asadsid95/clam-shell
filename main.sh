@@ -14,3 +14,4 @@ grep -c 'file' text.txt
 
 # Show time                 
 echo $(date)
+
