@@ -1,17 +1,9 @@
 #!/bin/bash
 
-# Execute another script
-#-----------
+#
+LOG_FILE="$(pwd)/logging.txt"
 
+# Append network interface configuration to logging.txt
+echo $(ip addr show) > "$LOG_FILE"
 
-# Go to dir
-cd utils/
-
-# Show time
-echo "Uptime: $(uptime)"
-
-grep -c 'FALSE' text.txt
-
-# Show time                 
-echo $(date)
-
+echo "FINISHED"
