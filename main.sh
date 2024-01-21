@@ -10,7 +10,7 @@ cd utils/
 # Show time
 echo "Uptime: $(uptime)"
 
-grep -c 'file' text.txt
+grep -c 'FALSE' text.txt
 
 # Show time                 
 echo $(date)
