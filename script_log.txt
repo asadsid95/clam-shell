@@ -1,0 +1,7 @@
+Script: main.sh
+Purpose: Capture network interface information
+Timestamp: Sun Jan 21 12:30:19 EST 2024
+----------------------------------------
+Sun Jan 21 12:30:19 EST 2024: Network interface information
+Command "show---" is unknown, try "ip address help".
+Sun Jan 21 12:30:19 EST 2024: ERROR - Script execution failed
