@@ -15,3 +15,6 @@ then
 else
     echo "$(date): ERROR - Script execution failed" >> "$LOG_FILE"
 fi
+
+# prints lines containing pattern
+grep "BROADCAST" script_log.txt
