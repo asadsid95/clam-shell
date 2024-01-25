@@ -1,20 +1,13 @@
 #!/bin/bash
 
-LOG_FILE="$(pwd)/script_log.txt"
+function generate_password() {
+    openssl rand -base64 12 | tr -d "/+="
+}
 
-# Log header
-echo "Script: $(basename "$0")" > "$LOG_FILE"
-echo "Purpose: Capture network interface information" >> "$LOG_FILE"
-echo "Timestamp: $(date)" >> "$LOG_FILE"
-echo "----------------------------------------" >> "$LOG_FILE"
+echo -n "Enter username: "
+read username
 
-# Display network interface information with timestamp and append it to logging.txt
-if { echo "$(date): Network interface information"; ip addr show; } >> "$LOG_FILE" 2>&1
-then
-    echo "$(date): Script execution successful" >> "$LOG_FILE"
-else
-    echo "$(date): ERROR - Script execution failed" >> "$LOG_FILE"
-fi
+password=$(generate_password)
 
-# prints lines containing pattern
-grep "BROADCAST" script_log.txt
+echo "Login info:"
+echo "$username: $password"
