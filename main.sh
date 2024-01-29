@@ -1,8 +1,6 @@
 #!/bin/bash
 
-# cat project.csv
+from_file="project.csv"
+to_file="result.csv"
 
-file="project.csv"
-file_mod="project1.csv"
-
-awk -v to_add="<API_TOKEN>" 'BEGIN {FS=OFS=","} {if (NR > 1) $2 = to_add} {print}' "$file" > "$file_mod"
+awk -v to_add="Email_add:<API_token>" 'BEGIN {FS=OFS=","} {if (NR > 1) $2 = $2 "" to_add} {print}' "$from_file" > "$to_file"
