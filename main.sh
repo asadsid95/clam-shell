@@ -1,6 +1,9 @@
 #!/bin/bash
 
-from_file="project.csv"
-to_file="result.csv"
+source_file="project.csv"
 
-awk -v to_add="Email_add:<API_token>" 'BEGIN {FS=OFS=","} {if (NR > 1) $2 = $2 "" to_add} {print}' "$from_file" > "$to_file"
+target_file="target.csv"
+
+awk -i inplace '{print $1}' project.csv
+
+echo "Finished processing file"         
