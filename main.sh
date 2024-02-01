@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source_file="project.csv"
+url="https://port-folio-asadsid95.vercel.app/"
 
-target_file="target.csv"
+file="script_history.txt"
 
-awk -i inplace '{print $1}' project.csv
+curl -v "$url" >> "$file" 2>&1
 
-echo "Finished processing file"         
+echo "Script finished"
