@@ -7,3 +7,4 @@ file="script_history.txt"
 curl -v "$url" >> "$file" 2>&1
 
 echo "Script finished"
+
